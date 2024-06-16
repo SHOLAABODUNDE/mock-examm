@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Mock Exam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>School Name: Pharez Oxfords Academy</h1>
+        <div class="teacher-info">
+            <img src="image/Fivver.png" alt="Teacher Picture">
+            <p>Name of Teacher: Instructor Tobi</p>
+        </div>
+        <div class="login-form">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="startExam()">Login</button>
+        </div>
+    </div>
+
+    <div class="exam-container" style="display: none;">
+        <div class="timer">Time left: <span id="time">20:00</span></div>
+        <form id="examForm">
+            <!-- Questions will be dynamically inserted here -->
+        </form>
+        <button type="button" onclick="submitExam()">Submit</button>
+        <div id="resultContainer" style="display: none;">
+            <button id="downloadBtn" onclick="downloadPDF()">Download PDF</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
